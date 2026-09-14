@@ -146,12 +146,6 @@ Do not invent scan results. The actual open ports depend on which services are r
 
 See `reflection.md` for the required short reflection connecting weak passwords and open ports to real-world security risk.
 
-## Important
-
-Do not put real passwords, API keys, tokens, private IP information, or other secrets into the public repository.
-
----
-
 # 👩‍💻 Learning Outcomes
 
 Through this assignment, I practiced:
@@ -165,6 +159,10 @@ Through this assignment, I practiced:
 * Port and service identification
 * Basic attack-surface analysis
 * Responsible and authorized security testing
+
+## Important
+
+Do not put real passwords, API keys, tokens, private IP information, or other secrets into the public repository.
 
 ---
 
