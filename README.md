@@ -44,7 +44,7 @@ Every check (length, uppercase, lowercase, number, special) always reports which
 
 ### Run the program
 
-Python 3.9+ is required (for `getpass`, standard since Python 2 and always available in CPython 3.9+).
+Python 3.7+ is required (the script uses `from __future__ import annotations`, which lets its modern type hints run on older Python 3 versions; `getpass` itself has been part of the standard library since Python 2).
 
 ```bash
 python password_checker.py
@@ -146,43 +146,32 @@ Do not invent scan results. The actual open ports depend on which services are r
 
 See `reflection.md` for the required short reflection connecting weak passwords and open ports to real-world security risk.
 
-## Requirements Checklist
-
-- [x] Python password-strength script
-- [x] Minimum 8-character check
-- [x] Uppercase check
-- [x] Lowercase check
-- [x] Number check
-- [x] Special-character check
-- [x] Common-password check (exact match + substring)
-- [x] Predictable-pattern check (keyboard walks, sequential runs, repeated characters)
-- [x] Weak / Medium / Strong rating
-- [x] Specific, per-check feedback (including when a password is also flagged as common/predictable)
-- [x] Automated tests (`test_password_checker.py`)
-- [x] Run Nmap on your own machine (`nmap localhost`)
-- [x] Record the actual open ports and likely services (`port_scan_results.md`)
-- [x] Explain security risks
-- [x] README with setup and run instructions
-- [ ] Push completed work to a public GitHub repository
-- [ ] Submit the repository link through the Week 2 submission form
-
-> `port_scan_results.md` also includes a `scanme.nmap.org` scan as a tool demonstration, since that's a target Nmap's own project maintains for safe testing — but the required own-machine result is the `localhost` scan.
-
-## GitHub Submission
-
-From the project folder:
-
-```bash
-git init
-git add .
-git commit -m "Complete VortexTech Cyber Security Week 2"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/vortextech-cybersec-week2.git
-git push -u origin main
-```
-
-Replace the remote URL with your actual GitHub repository.
-
 ## Important
 
 Do not put real passwords, API keys, tokens, private IP information, or other secrets into the public repository.
+
+---
+
+# 👩‍💻 Learning Outcomes
+
+Through this assignment, I practiced:
+
+* Basic password security concepts
+* Python conditional logic
+* Character and string validation
+* Common-password detection
+* Network reconnaissance fundamentals
+* Nmap command-line usage
+* Port and service identification
+* Basic attack-surface analysis
+* Responsible and authorized security testing
+
+---
+
+## 📌 Disclaimer
+
+This project is created for **educational and cybersecurity training purposes** as part of the VortexTech Cyber Security Internship.
+
+Network scanning should only be performed against systems that you own or have explicit authorization to test.
+
+No unauthorized exploitation or intrusive activity is performed as part of this project.
